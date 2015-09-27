@@ -3,8 +3,8 @@
 
 # Building a XOOPS Module by Kaotik
 #### for XOOPS 2.5.7
-      
-![logoModule.png](assets/logoModule.png)
+
+<br><br><br>
             
 ## Developer Manual
 
