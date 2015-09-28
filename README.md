@@ -23,7 +23,7 @@ This Tutorial is for developers who would like to learn how to develop a XOOPS M
 * [Part 5 - Guidelines for Module Development](book/5.md)
 * [Part 6 - Theme Development](book/6.md)
 * [Part 7 - $_SUPER GLOBALS How to use them in a XOOPS module](book/7.md)
-* [Part 8 - DB Operations and Classes](book/8.md) //delete, if not used
+* [Part 8 - DB Operations and Classes](book/8.md)
 * [Part 9 - Jquery and Javascript, a simple beginning](book/9.md)
 * [Part 10 - Admin menus and Jquery](book/10.md)
 * [Part 11 - Jquery: Form Validation+Rounded Corners+List Items](book/11.md)
