@@ -1,17 +1,17 @@
 ### _XOOPS Documentation Series_
 ![logoXoops.jpg](assets/logoXoops.jpg)
 
-# Building a XOOPS Module by Kaotik
-#### for XOOPS 2.5.7
+# Building a XOOPS Module
+#### Tutorial by[ Kaotik](www.kaotik.biz) for XOOPS 2.5.7
 
 <br><br><br>
             
-## Developer Manual
+#### This Tutorial is for developers who would like to learn how to develop a XOOPS Module
 
 © 2015 The XOOPS Project (www.xoops.org)    
 
 
-This Tutorial is for developers who would like to learn how to develop a XOOPS Module
+
 
 
 # Table of Content
