@@ -1,0 +1,16 @@
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><{$smarty.const.TT_NAME}></td>
+    <td><{$smarty.const.TT_ADDRESS}></td>
+    <td><{$smarty.const.TT_TELEPHONE}></td>
+    <td><{$smarty.const.TT_EMAIL}></td>
+  </tr>
+  <{foreach item=cli from=$clients}>
+  <tr>
+    <td><{$cli.name}></td>
+    <td><{$cli.address}></td>
+    <td><{$cli.telephone}></td>
+    <td><{$cli.email}></td>
+  </tr>
+  <{/foreach}>
+</table>

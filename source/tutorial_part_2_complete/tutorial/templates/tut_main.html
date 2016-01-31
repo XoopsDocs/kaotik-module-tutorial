@@ -1,0 +1,26 @@
+<{$msg}>
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><a href="index.php?addnew=1">Add new Client</a></td>
+  </tr>
+</table>
+<{if $addnew==1}>
+<{include file="db:tut_form.html"}>
+<{/if}>
+
+<table width="100%"  border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><{$smarty.const.TT_NAME}></td>
+    <td><{$smarty.const.TT_ADDRESS}></td>
+    <td><{$smarty.const.TT_TELEPHONE}></td>
+    <td><{$smarty.const.TT_EMAIL}></td>
+  </tr>
+  <{foreach item=cli from=$client}>
+  <tr>
+    <td><{$cli.name}></td>
+    <td><{$cli.address}></td>
+    <td><{$cli.telephone}></td>
+    <td><{$cli.email}></td>
+  </tr>
+  <{/foreach}>
+</table>

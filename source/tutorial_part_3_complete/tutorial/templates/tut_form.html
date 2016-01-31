@@ -1,0 +1,20 @@
+<form id="myform" name="myform" method="post" action="index.php">
+  <table width="400" border="0">
+    <tr>
+      <td align="right"><{$smarty.const.TT_NAME}></td>
+      <td><input type="text" name="name"></td>
+    </tr><tr>
+      <td align="right"><{$smarty.const.TT_ADDRESS}></td>
+      <td><input type="text" name="address"></td>
+    </tr><tr>
+      <td align="right"><{$smarty.const.TT_TELEPHONE}></td>
+      <td><input type="text" name="tel"></td>
+    </tr><tr>
+      <td align="right"><{$smarty.const.TT_EMAIL}></td>
+      <td><input type="text" name="email"></td>
+    </tr><tr>
+      <td></td>
+      <td><input type="button" value="Submit" onclick="xajax_processFormData(xajax.getFormValues('myform'));" /></td>
+    </tr>
+  </table>
+</form>
