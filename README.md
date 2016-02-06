@@ -29,7 +29,7 @@ This Tutorial is for developers who would like to learn how to develop a XOOPS M
 * [Part 11 - Jquery: Form Validation+Rounded Corners+List Items](en/book/11.md)
 * [Part 12 - Cloning functions, a diferent approach dealing with classes.](en/book/12.md) 
 * [Credits](en/book/13.md) 
-* [About XOOPS CMS](en/book/13.md) 
+* [About XOOPS CMS](en/book/10aboutxoops.md) 
 
 ##License:
 
