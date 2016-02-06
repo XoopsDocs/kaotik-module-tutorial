@@ -1,5 +1,5 @@
 ### _XOOPS Documentation Series_
-![logoXoops.jpg](assets/logoXoops.jpg)
+![logoXoops.jpg](en/assets/logoXoops.jpg)
 
 # Building a XOOPS Module by Kaotik
 #### for XOOPS 2.5.7
