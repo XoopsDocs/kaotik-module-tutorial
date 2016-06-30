@@ -8,6 +8,10 @@ If you start writing code without first defining what your module should do, it'
 Never start a module with directly coding - if you do, you will be limiting the module to what you already know in terms of code instead of what it should accomplish.
 A good example of this is writing themes for XOOPS, where you often use a default template. If you start hacking away at a default template, you're already limiting yourself to the choices made in the default template that might be hard to change.
 
+#### Properly indent your code
+There are quite a lot of conventions and one of them is to indent your code. Unindented code is a nightmare to work in and is very hard to understand.
+If you properly indent your code, you'll make your life a lot easier as well as the life of many people around you.
+
 ##### Template aesthetics vs. functionality
 As you get better at PHP and XOOPS development, you'll find that you are cramming more and more functionality into templates, making use of more and more <{if}> statements. This is a mistake, as the whole point of using Smarty (XOOPS it's templating engine) is to visually arrange HTML code without having PHP in it. If you open a smarty template in a WYSIWYG and if you can't understand what's going on, then you already have too much going on inside it.
 
