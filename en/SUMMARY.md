@@ -1,5 +1,6 @@
 # Table of Content
 
+* [Guidelines for module development](book/guidelines/guidelines.md)
 * [Building your first module](book/building_a_simple_module/introduction.md)
     * [Hello world!](book/building_a_simple_module/helloworld.md)
     * [Memberlist](book/building_a_simple_module/memberlist.md)
@@ -11,7 +12,7 @@
 * [Part 2 - using Smarty templates in a module](book/2.md)
 * [Part 3 - Building an AJAX Module](book/3.md)
 * [Part 4 - Xoops Blocks](book/4.md)
-* [Part 5 - Guidelines for Module Development](book/5.md)
+
 * [Part 6 - Theme Development](book/6.md)
 * [Part 7 - $_SUPER GLOBALS How to use them in a XOOPS module](book/7.md)
 * [Part 8 - DB Operations and Classes](book/8.md) //delete, if not used
