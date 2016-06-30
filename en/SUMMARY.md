@@ -5,6 +5,7 @@
     * [Memberlist](book/building_a_simple_module/memberlist.md)
     * [Translations](book/building_a_simple_module/translations.md)
     * [Database](book/building_a_simple_module/database.md)
+    * [Storing information in the database](book/building_a_simple_module/saving_to_database.md)
 * [Part 2 - using Smarty templates in a module](book/2.md)
 * [Part 3 - Building an AJAX Module](book/3.md)
 * [Part 4 - Xoops Blocks](book/4.md)

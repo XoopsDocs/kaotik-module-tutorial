@@ -11,3 +11,4 @@ This tutorial will teach you how to build a simple XOOPS module from scratch.
 The first step required is to download the blank module called Tutorial, [https://github.com/kevinpetit/kaotik-module-tutorial/raw/master/tutorial.zip](which you can download from GitHub here).
 
 This tutorial assumes that you have a basic understanding of HTML, SQL and PHP.
+In particular, you should be familiar with arrays, foreach loops, database with PHP and SQL.
