@@ -1,35 +1,40 @@
 ### _XOOPS Documentation Series_
-![logoXoops.jpg](en/assets/logoXoops.jpg)
+![logoXoops.jpg](assets/logoXoops.jpg)
 
 # Building a XOOPS Module by Kaotik
+## Complete revision by Kevin Petit
 #### for XOOPS 2.5.7
 
-<br><br><br>
+<br><br>
             
 ## Developer Manual
 
 © 2016 XOOPS Project ([www.xoops.org](http://xoops.org))   
 
 
-This Tutorial is for developers who would like to learn how to develop a XOOPS Module
+This tutorial will teach you how to build a simple XOOPS module from scratch.
+This tutorial assumes that you have at least a basic understanding of HTML, SQL and PHP (you should be familiar with array's, foreach loops, etc).
 
 
 # Table of Content
 
-* [Part 1 - Building a Simple Module](en/book/1.md)
-* [Part 2 - using Smarty templates in a module](en/book/2.md)
-* [Part 3 - Building an AJAX Module](en/book/3.md)
-* [Part 4 - Xoops Blocks](en/book/4.md)
-* [Part 5 - Guidelines for Module Development](en/book/5.md)
-* [Part 6 - Theme Development](en/book/6.md)
-* [Part 7 - $_SUPER GLOBALS How to use them in a XOOPS module](en/book/7.md)
-* [Part 8 - DB Operations and Classes](en/book/8.md) 
-* [Part 9 - Jquery and Javascript, a simple beginning](en/book/9.md)
-* [Part 10 - Admin menus and Jquery](en/book/10.md)
-* [Part 11 - Jquery: Form Validation+Rounded Corners+List Items](en/book/11.md)
-* [Part 12 - Cloning functions, a diferent approach dealing with classes.](en/book/12.md) 
-* [Credits](en/book/13.md) 
-* [About XOOPS CMS](en/book/10aboutxoops.md) 
+* [Building your first module](book/building_a_simple_module/introduction.md)
+    * [Hello world!](book/building_a_simple_module/helloworld.md)
+    * [Memberlist](book/building_a_simple_module/memberlist.md)
+    * [Translations](book/building_a_simple_module/translations.md)
+    * [Database](book/building_a_simple_module/database.md)
+* [Part 2 - using Smarty templates in a module](book/2.md)
+* [Part 3 - Building an AJAX Module](book/3.md)
+* [Part 4 - Xoops Blocks](book/4.md)
+* [Part 5 - Guidelines for Module Development](book/5.md)
+* [Part 6 - Theme Development](book/6.md)
+* [Part 7 - $_SUPER GLOBALS How to use them in a XOOPS module](book/7.md)
+* [Part 8 - DB Operations and Classes](book/8.md) //delete, if not used
+* [Part 9 - Jquery and Javascript, a simple beginning](book/9.md)
+* [Part 10 - Admin menus and Jquery](book/10.md)
+* [Part 11 - Jquery: Form Validation+Rounded Corners+List Items](book/11.md)
+* [Part 12 - Cloning functions, a diferent approach dealing with classes.](book/12.md) 
+* [Credits](book/13.md) 
 
 ##License:
 
