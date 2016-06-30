@@ -23,6 +23,8 @@ This tutorial assumes that you have at least a basic understanding of HTML, SQL 
     * [Memberlist](book/building_a_simple_module/memberlist.md)
     * [Translations](book/building_a_simple_module/translations.md)
     * [Database](book/building_a_simple_module/database.md)
+    * [Building a form](book/building_a_simple_module/buildingform.md)
+    * [Storing information in the database](book/building_a_simple_module/saving_to_database.md)
 * [Part 2 - using Smarty templates in a module](book/2.md)
 * [Part 3 - Building an AJAX Module](book/3.md)
 * [Part 4 - Xoops Blocks](book/4.md)
@@ -35,6 +37,7 @@ This tutorial assumes that you have at least a basic understanding of HTML, SQL 
 * [Part 11 - Jquery: Form Validation+Rounded Corners+List Items](book/11.md)
 * [Part 12 - Cloning functions, a diferent approach dealing with classes.](book/12.md) 
 * [Credits](book/13.md) 
+
 
 ##License:
 

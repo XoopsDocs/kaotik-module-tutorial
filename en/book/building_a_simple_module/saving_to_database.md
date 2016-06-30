@@ -1,78 +1,6 @@
-Using Forms and a Database
-Let's build a simple form in index.php
+#### Saving to the database
 
-```php
-<?php
-// Tutorial
-// Created by KaotiK
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-?>
-<form name="tutorial_form" method="post" action="index.php">
-<table width="400" border="0">
-<tr>
-<td align="right">Name</td>
-<td><input type="text" name="name"></td>
-</tr><tr>
-<td align="right">Address</td>
-<td><input type="text" name="address"></td>
-</tr><tr>
-<td align="right">Telephone</td>
-<td><input type="text" name="tel"></td>
-</tr><tr>
-<td align="right">Email</td>
-<td><input type="text" name="email"></td>
-</tr><tr>
-<td>&nbsp;</td>
-<td><input type="submit" name="submit" value="submit"></td>
-</tr>
-</table>
-</form>
-<?php
-require(XOOPS_ROOT_PATH.'/footer.php');
-?>
-```
-
-Now if you click on tutorial on main menu you will see a form with name, address, telephone and email and a submit button. Clicking on the submit button brings you back to index.php but doesn't do anything. 
-
-Insert the following code:
-```php
-<?php
-// Tutorial 
-// Created by KaotiK 
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-if (isset($_POST['submit'])){
-echo 'my name is: '. $_POST['name'];
-}
-?>
-```
-
-I've only placed the top part of the code to keep this page smaller. Your index.php file should have the entire code.
-Now when you click on submit you get a line of text saying "my name is: " and your name. Let me explain what is happening. The php command if is a conditional control. IF something is TRUE (for ex.) then DO something. In this case IF the form button was pressed then print the statment. The submit button is ```$_POST['submit']``` the name 'submit' comes from the name of our button and to check if it exists I used ```isset``` which returns TRUE if it does exist and FALSE if it does not.
-Now try pressing submit without filling anything. You will notice that it still prints "my name is: " but without a name. Let's create an error message if no name is filled in.
-
-```php
-<?php
-// Tutorial 
-// Created by KaotiK 
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-if (isset($_POST['submit'])){
-if (empty($_POST['name'])){
-echo 'please fill in a name';
-} else {
-echo 'my name is: '. $_POST['name'];
-}
-}
-?>
-```
-
-Pressing submit with an empty name now prints an error message. You will notice that I'm using an IF condition inside another IF. It's saying: if the form field named "name" is empty then print 'please fill in a name' if not (else) ```'my name is: '. $_POST['name']```
-
-**Putting Data into the DB**
-
-Let's take this a step further. We will now insert the form data into our DB table.
+Finally, we have arrived at storing our information! We will now insert the form data that we enter into our database table. I hope you're ready!
 
 ```php 
 <?php
@@ -81,38 +9,40 @@ Let's take this a step further. We will now insert the form data into our DB tab
 require('../../mainfile.php');
 require(XOOPS_ROOT_PATH.'/header.php');
 if (isset($_POST['submit'])){
-if (empty($_POST['name'])){
-echo 'please fill in a name';
-} else {
-$name=$_POST['name'];
-$address=$_POST['address'];
-$tel=$_POST['tel'];
-$email=$_POST['email'];
-$query = "Insert into ".$xoopsDB->prefix("tutorial_myform")." (name, address, telephone, email) values ('$name', '$address', '$tel', '$email' )";
-$res=$xoopsDB->query($query);
-if(!$res) {
-echo "error: $query";
-} else {
-echo "Data was correctly inserted into DB!";
-}
-}
+    if (empty($_POST['name'])){
+        echo 'Please fill in a name';
+    } else {
+        // $_POST contains all the information from our form. We're creating a new variable to contain the submitted information.
+        // This way, we can easily put them through to the database.
+        $name       =   $_POST['name'];
+        $address    =   $_POST['address'];
+        $tel        =   $_POST['tel'];
+        $email      =   $_POST['email'];
+        // All values are done, let's prepare our SQL-query to store this information
+        $query      =   "INSERT INTO ".$xoopsDB->prefix("tutorial_myform")." (name, address, telephone, email) VALUES ('$name', '$address', '$tel', '$email' )";
+        // Let's perform the query
+        $res        =   $xoopsDB->query($query);
+        if (!$res) {
+            echo "We've encountered an error: $query";
+        } else {
+            echo "Data was correctly inserted into the database!";
+        }
+    }
 }
 ?>
 ```
 
-The first 4 lines of new code create variables set to form values. I've done it this way for a better understanding of what's happening. The next line $query builds the line that will be used by $xoopsDB in
+The first 4 lines of new code set up variables which contain the form information. Upon sending a form, all information is stored in the **$_POST** superglobal.
+The next line, **$query**, sets up the query that will be used to actually insert our data.
+The line **$res** then performs this query, and with the next line we check if the data was inserted or not.
 
-```php
-$res=$xoopsDB->query($query);
-```
+If everything went good, we should see **Data was correctly inserted into the database!". If something went wrong, we'll see the error.
 
-The next line:
+!!!TODO: Add a block about text sanitation in XOOPS!!!
 
-```php
-if(!$res)
-```
+**This code however is **NOT** ready to be used in your module as it lacks text sanitation - in simple words: it's DANGEROUS AND YOU SHOULD NOT USE THIS CODE ON YOUR SITE.
+If you do use it, your site is easily hacked.**
 
-checks if any error occurred when accessing the DB. If all went fine print "Data was correctly inserted into DB!". In later tutorials I will teach you about text sanitation and it's importance.
 Listing table contents
 
 Now we are going to create a button to list all the content in our table.
