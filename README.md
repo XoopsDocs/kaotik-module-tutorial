@@ -5,6 +5,8 @@
 ## Complete revision by Kevin Petit
 #### for XOOPS 2.5.7
 
+** This book is currently undergoing a revision - Build your first module is already revised. **
+
 <br><br>
             
 ## Developer Manual
