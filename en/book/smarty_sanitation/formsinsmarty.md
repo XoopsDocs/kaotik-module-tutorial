@@ -176,6 +176,7 @@ function clientLoader(){
     return $client;
 }
 require(XOOPS_ROOT_PATH.'/footer.php');
-?>```
+
+```
 
 Let's continue on and fix more issue with our code!
