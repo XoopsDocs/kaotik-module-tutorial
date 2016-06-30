@@ -17,8 +17,10 @@ As you get better at PHP and XOOPS development, you'll find that you are crammin
 
 So, how do I give users options without overloading the templates? With help-files - show users the available options they can use inside the templates. For example: you have an article. Instead of having a XOOPS Preference for each individual item such as article date, name, title, publisher, etc, create a simple base template and then show your users which options are available inscase they want to add more info to that template:
 ```php
-<{$art.title}>,<{$art.date}>,<{$art.name}>,<{$art.publisher}>,```etc.
+<{$art.title}>,<{$art.date}>,<{$art.name}>,<{$art.publisher}>,
 ```
+etc.
+
 ##### MVC
 An often used pattern in PHP is MVC, which stands for Model, View, Controller and simply said this means that you seperate all database logic, all application logic and all views (layout) from each other. This promotes creating re-usable code, as well as making your module easier to maintain.
 
@@ -62,12 +64,14 @@ Now, what if I wanted to add more phone numbers for each client? Your first thou
 So now, when we want the phone numbers for "john anton" we just do a query on
 
 ```php
-table_client_phones where table_client_id is equal to '12'. ```
+table_client_phones where table_client_id is equal to '12'. 
+```
 
 If we wanted a specific type of phone, for example the mobile we could build a query like this: 
 
 ```php
-" WHERE table_client_id='12' AND phone_type='mobile' ".```
+" WHERE table_client_id='12' AND phone_type='mobile' ".
+```
 
 ##### Feature Creep
 When you finally publish your first module, lots of feature requests will start coming from your users. Before you even consider those new features consider these points:
