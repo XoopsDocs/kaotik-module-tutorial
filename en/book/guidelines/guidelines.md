@@ -17,9 +17,9 @@ As you get better at PHP and XOOPS development, you'll find that you are crammin
 
 So, how do I give users options without overloading the templates? With help-files - show users the available options they can use inside the templates. For example: you have an article. Instead of having a XOOPS Preference for each individual item such as article date, name, title, publisher, etc, create a simple base template and then show your users which options are available inscase they want to add more info to that template:
 ```php
-<{$art.title}>,<{$art.date}>,<{$art.name}>,<{$art.publisher}>,
+<{$art.title}>,<{$art.date}>,<{$art.name}>,<{$art.publisher}>, etc.
 ```
-etc.
+
 
 ##### MVC
 An often used pattern in PHP is MVC, which stands for Model, View, Controller and simply said this means that you seperate all database logic, all application logic and all views (layout) from each other. This promotes creating re-usable code, as well as making your module easier to maintain.
