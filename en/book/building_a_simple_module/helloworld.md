@@ -62,7 +62,7 @@ We're going to add this to this file - don't worry, I've commented everything:
 ?>
 ```
 
-If you don't understand this, I suggest you first follow a basic PHP course like (https://www.codecademy.com/learn/php)[this one from Codecademy] - once you've done that one, you should have a better understanding of what's going on.
+If you don't understand this, I suggest you first follow a basic PHP course like [this one from Codecademy](https://www.codecademy.com/learn/php) - once you've done that one, you should have a better understanding of what's going on.
 
 Because we named our module it's directory **people**, the name of our module and the dirname will automaticly be set to **people** as well. This is a best-practice, since this allows people to re-use a module by renaming it. For example, you might want to use our module to manage both your staff and your clients - if you rename the folder to staff and another one clients, this will allow you to use a pretty link like **/modules/staff** and **/modules/client** for your site.
 
