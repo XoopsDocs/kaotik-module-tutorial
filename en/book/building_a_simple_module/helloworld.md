@@ -18,7 +18,7 @@ Don't worry if you don't understand what each of this folders is for, they will 
 With this, the basic structure of our module is finished and we can get started with creating files!
 
 The first step we'll take towards this is to create a nice logo for our module, which will be used in the Module Administration! You can make your own or use the one that I created:
-![logoModule.png](assets/logoModule.png)
+![logoModule.png](../assets/logoModule.png)
 
 Download (or move) the image to the **images** folder, so that our module exists out of these files:
 * images
