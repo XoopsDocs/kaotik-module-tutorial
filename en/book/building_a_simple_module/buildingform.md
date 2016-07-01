@@ -1,3 +1,7 @@
+#### Building a form
+
+We've gotten quite far, so let's take the last hurdle and finish our first module! In order to store things in our database, we use a form.
+Let's get to work and start building this form.
 
 Before we can do that, let's create some new translations. Open up **english\main.php** and add these new lines:
 ```php
