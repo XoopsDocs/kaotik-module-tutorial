@@ -1,7 +1,7 @@
 # Getting our first module up and running
 Welcome to the path to building your first XOOPS module! Don't worry, it's actually not that hard as you think, and we'll walk you through every step of it.
 
-Should you get stuck, don't worry and feel free to ask for help on our (http://xoops.org/modules/newbb/viewforum.php?forum=65)[official forums].
+Should you get stuck, don't worry and feel free to ask for help on our [official forums](http://xoops.org/modules/newbb/viewforum.php?forum=65).
 
 ## Getting started
 In order to create our first module, we'll need to set-up some files and a directory structure. Let's get right to it!
@@ -28,7 +28,7 @@ Download (or move) the image to the **images** folder, so that our module exists
 * sql
 
 Great! Now it's time to really get started and create our first PHP-file. For that, we're going to create the file **xoops_version.php** which we'll store in the root of our module.
-Open up the **xoops_version.php** file in your preferred code editor (like (https://notepad-plus-plus.org/)[NotePad++], (http://sublimetext.com)[Sublime Text], (https://code.visualstudio.com/)[Visual Studio Code], (http://atom.io)[Atom], ([)http://backets.io)[Brackets], (https://www.jetbrains.com/phpstorm)[PhpStorm],...).
+Open up the **xoops_version.php** file in your preferred code editor (like [NotePad++](https://notepad-plus-plus.org/), [Sublime Text](http://sublimetext.com), [Visual Studio Code](https://code.visualstudio.com/), [Atom](http://atom.io), [Brackets](http://backets.io), [PhpStorm](https://www.jetbrains.com/phpstorm),...).
 
 We're going to add this to this file - don't worry, I've commented everything:
 ```php
