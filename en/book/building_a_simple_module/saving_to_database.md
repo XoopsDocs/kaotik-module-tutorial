@@ -35,7 +35,7 @@ And now we can finalize our file **index.php**:
             $tel        =   $xoopsDB->escape(XoopsRequest::getString('tel', ''));
             $email      =   $xoopsDB->escape(XoopsRequest::getString('email', ''));
             // All values are done, let's prepare our SQL-query to store this information
-            $query      =   "INSERT INTO ".$xoopsDB->prefix("tutorial_myform")." (name, address, telephone, email) VALUES ('$name', '$address', '$tel', '$email' )";
+            $query      =   "INSERT INTO ".$xoopsDB->prefix(basename(__DIR__).'_myform')." (name, address, telephone, email) VALUES ('$name', '$address', '$tel', '$email' )";
             // Let's perform the query
             $res        =   $xoopsDB->query($query);
             if (!$res) {
@@ -73,6 +73,6 @@ The first 4 lines of new code set up variables which contain the form informatio
 The next line, **$query**, sets up the query that will be used to actually insert our data.
 The line **$res** then performs this query, and with the next line we check if the data was inserted or not.
 
-If everything went good, we should see **Data was correctly inserted into the database!". If something went wrong, we'll see the error.
+If everything went good, we should see **Data was correctly inserted into the database!**. If something went wrong, we'll see the error.
 
 Next, we'll list everything in our database!
