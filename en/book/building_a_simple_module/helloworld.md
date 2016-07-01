@@ -18,7 +18,7 @@ Don't worry if you don't understand what each of this folders is for, they will 
 With this, the basic structure of our module is finished and we can get started with creating files!
 
 The first step we'll take towards this is to create a nice logo for our module, which will be used in the Module Administration! You can make your own or use the one that I created:
-![people.jpg](assets/people.jpg)
+![logoModule.png](assets/logoModule.png)
 
 Download (or move) the image to the **images** folder, so that our module exists out of these files:
 * images
@@ -28,7 +28,7 @@ Download (or move) the image to the **images** folder, so that our module exists
 * sql
 
 Great! Now it's time to really get started and create our first PHP-file. For that, we're going to create the file **xoops_version.php** which we'll store in the root of our module.
-Open up the **xoops_version.php** file in your preferred code editor (like (https://notepad-plus-plus.org/)[NotePad++], (http://sublimetext.com)[Sublime Text], (https://code.visualstudio.com/)[Visual Studio Code], (http://atom.io)[Atom], [http://backets.io][Brackets], (https://www.jetbrains.com/phpstorm)[PhpStorm],...).
+Open up the **xoops_version.php** file in your preferred code editor (like (https://notepad-plus-plus.org/)[NotePad++], (http://sublimetext.com)[Sublime Text], (https://code.visualstudio.com/)[Visual Studio Code], (http://atom.io)[Atom], ([)http://backets.io)[Brackets], (https://www.jetbrains.com/phpstorm)[PhpStorm],...).
 
 We're going to add this to this file - don't worry, I've commented everything:
 ```php
