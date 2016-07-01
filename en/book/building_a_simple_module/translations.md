@@ -6,12 +6,11 @@ To do this, we need to create a folder called **language** (important: foldernam
 Now, inside that folder let's create another folder called **english**. Inside the folder **english** create a new file called **main.php**. Now place this code inside **main.php**:
 ```php
 <?php
-define('TT_NAME','Name');
-define('TT_EMAIL','Email');
-?>
+    define('PP_NAME','Name');
+    define('PP_EMAIL','Email');
 ```
 
-Create another file in this same folder called modinfo.php.
+Create another file in this same folder called **modinfo.php**.
 Inside this file place and empty PHP tags:
 ```php
 <?php
@@ -22,33 +21,33 @@ Open up index.php and change the following:
 
 ```php
 <?php
-// Tutorial
-// Created by KaotiK
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-echo '<table width="100" border="0">
-<tr>
-    <td>'.TT_NAME.'</td>
-    <td>'.TT_EMAIL.'</td>
-</tr>';
-$member_handler =& xoops_gethandler('member');
-$foundusers =& $member_handler->getUsers();
-    foreach (array_keys($foundusers) as $j) {
-        // This pastes the username and email together in 
-        echo '<tr>';
-            echo '<td>';
-                // Let's write the username
-                echo $foundusers[$j]->getVar("uname");
-            echo '</td>';
-            echo '<td>';
-                echo $foundusers[$j]->getVar("email");
-            echo '</td>';
-        echo '</tr>';
+    // This file contains all of the information XOOPS needs to work (like the database information). It's the bootstrap of XOOPS, basicly.
+    require_once dirname(dirname(__DIR__)) . '/mainfile.php';
+    // This file contains the header and layout of our XOOPS website.
+    require_once XOOPS_ROOT_PATH . '/header.php';
+    // Create the headers
+    echo '<div class="left">'.PP_NAME.'</div>';
+    echo '<div class="right">'.PP_EMAIL.'</div>';
+    // Load up the XOOPS member handler
+    $member_handler =& xoops_gethandler('member');
+    // Grab all our members
+    $allUsers =& $member_handler->getUsers();
+    // Print out our users one by one.
+    foreach(array_keys($allUsers) as $i) {
+        echo '<div class="left">';
+        // Let's write the username
+        echo $allUsers[$i]->getVar('uname');
+        echo '</div>';
+        echo '<div class="right">';
+        // Let's write the e-mail now
+        echo $allUsers[$i]->getVar('email');
+        echo '</div>';
     }
-echo '</table>';
-require(XOOPS_ROOT_PATH.'/footer.php');
+
+    // This file contains the footer, which contains scripts and closes our layout.
+    require_once XOOPS_ROOT_PATH . '/footer.php';
 ?>
 ```
 
 Excellent! We now have language constants in our module, which means that our module is now translateable!
-As a challenge, try to add your own language as an option!
+As a challenge, try to add your own language as an option (it shouldn't be that hard!).
