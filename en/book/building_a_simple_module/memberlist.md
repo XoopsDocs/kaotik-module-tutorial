@@ -22,14 +22,26 @@ If this still looks intimidating to you, I suggest you try some other tutorials 
 
 Now, let's say that we want to see **everything** about our users - well, that's possible! **However, only use this on test sites - you don't want to show this much information on a public site!**
 
+Modify our file so that it looks like this:
+
 ```php
-$member_handler =& xoops_gethandler('member');
-$foundusers =& $member_handler->getUsers();
-foreach (array_keys($foundusers) as $j) {
-//echo $foundusers[$j]->getVar("uname").'<br>';
-    var_dump($foundusers[$j]);
-echo '<br><br><br>';
-} 
+<?php
+    // This file contains all of the information XOOPS needs to work (like the database information). It's the bootstrap of XOOPS, basicly.
+    require_once dirname(dirname(__DIR__)) . '/mainfile.php';
+    // This file contains the header and layout of our XOOPS website.
+    require_once XOOPS_ROOT_PATH . '/header.php';
+    // Load up the XOOPS member handler
+    $member_handler =& xoops_gethandler('member');
+    // Grab all our members
+    $allUsers =& $member_handler->getUsers();
+    // Now let's loop through all our users
+    foreach(array_keys($allUsers) as $i) {
+        var_dump($allUsers[$i]);
+        echo '<br>';
+    }
+    // This file contains the footer, which contains scripts and closes our layout.
+    require_once XOOPS_ROOT_PATH . '/footer.php';
+?>
 ```
 What you'll see now is a big list that looks very confusing, but shows all the information about your users that you can use.
 If you've got xdebug installed, it should be presented in a orderly list though (don't worry if you don't know what xdebug is - that's way beyond our scope here).
@@ -66,69 +78,33 @@ Once again, here's the complete new code:
 
 ```php
 <?php
-// Tutorial
-// Created by KaotiK
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-?>
-<table width="100" border="0">
-    <tr>
-        <td>Name</td>
-        <td>Email</td>
-    </tr>
-    <?php
+    // This file contains all of the information XOOPS needs to work (like the database information). It's the bootstrap of XOOPS, basicly.
+    require_once dirname(dirname(__DIR__)) . '/mainfile.php';
+    // This file contains the header and layout of our XOOPS website.
+    require_once XOOPS_ROOT_PATH . '/header.php';
+    // Create the headers
+    echo '<div class="left">Name</div>';
+    echo '<div class="right">E-mail</div>';
+    // Load up the XOOPS member handler
     $member_handler =& xoops_gethandler('member');
-    $foundusers =& $member_handler->getUsers();
-    foreach (array_keys($foundusers) as $j) {
-        // This pastes the username and email together in 
-        echo '<tr>';
-            echo '<td>';
-                // Let's write the username
-                echo $foundusers[$j]->getVar("uname");
-            echo '</td>';
-            echo '<td>';
-                echo $foundusers[$j]->getVar("email");
-            echo '</td>';
-        echo '</tr>';
+    // Grab all our members
+    $allUsers =& $member_handler->getUsers();
+    // Print out our users one by one.
+    foreach(array_keys($allUsers) as $i) {
+        echo '<div class="left">';
+        // Let's write the username
+        echo $allUsers[$i]->getVar('uname');
+        echo '</div>';
+        echo '<div class="right">';
+        // Let's write the e-mail now
+        echo $allUsers[$i]->getVar('email');
+        echo '</div>';
     }
-?>
-</table>
-<?php
-require(XOOPS_ROOT_PATH.'/footer.php');
-?>
-```
-Now, let's reload our website and we should see our table filled with the usernames and mails of our users! Nice - however, our code isn't that good, as we're going between PHP and HTML. Let's fix it so that we only have 1 PHP block of code anymore!
 
-```php
-<?php
-// Tutorial
-// Created by KaotiK
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-// We'll echo out the table headers
-echo '<table width="100" border="0">
-        <tr>
-            <td>Name</td>
-            <td>Email</td>
-        </tr>';
-$member_handler =& xoops_gethandler('member');
-$foundusers =& $member_handler->getUsers();
-    foreach (array_keys($foundusers) as $j) {
-        // This pastes the username and email together in 
-        echo '<tr>';
-            echo '<td>';
-                // Let's write the username
-                echo $foundusers[$j]->getVar("uname");
-            echo '</td>';
-            echo '<td>';
-                echo $foundusers[$j]->getVar("email");
-            echo '</td>';
-        echo '</tr>';
-    }
-echo '</table>';
-require(XOOPS_ROOT_PATH.'/footer.php');
+    // This file contains the footer, which contains scripts and closes our layout.
+    require_once XOOPS_ROOT_PATH . '/footer.php';
 ?>
 ```
 
-Ahhh, much better! We have the same end-result but now the code is more legible. Now, let's bring some more XOOPS standards into our code!
+Ahhh, much better! Now we have a nice overview of our users their usernames as well as their emails. Now, let's bring some more XOOPS standards into our code!
 The next step we're going to take is to make our module translateable.

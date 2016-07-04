@@ -1,22 +1,21 @@
 ### _XOOPS Documentation Series_
 ![logoXoops.jpg](assets/logoXoops.jpg)
 
-# Building a XOOPS Module by Kaotik
-## Complete revision by Kevin Petit
-#### for XOOPS 2.5.7
+# Building XOOPS modules
+## Originally written by KaotiK, complete revision by Kevin Petit
+#### for XOOPS 2.5.8
 
-** This book is currently undergoing a revision - Build your first module is already revised. **
+** This book is currently undergoing a revision - not all parts are up-to-date!. **
 
-<br><br>
+<br>
             
 ## Developer Manual
 
 © 2016 XOOPS Project ([www.xoops.org](http://xoops.org))   
 
 
-This tutorial will teach you how to build a simple XOOPS module from scratch.
-This tutorial assumes that you have at least a basic understanding of HTML, SQL and PHP (you should be familiar with array's, foreach loops, etc).
-
+This book will learn you how to build modules for XOOPS. 
+You are assumed to have at least a basic understanding of HTML, SQL and PHP.
 
 # Table of Content
 
