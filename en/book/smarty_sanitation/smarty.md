@@ -13,8 +13,9 @@ I'll show you an example of a Smarty template:
    <title>{$title_text|escape}</title>
 </head>
 
-<body> {* This is a comment that won't be visible in the HTML source *}
-{$body_html}
+<body> 
+    {* This is a comment that won't be visible in the HTML source *}
+    {$body_html}
 </body><!-- this is a comment that will be seen in the HTML source -->
 </html>
 ```

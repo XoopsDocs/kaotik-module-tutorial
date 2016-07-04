@@ -203,5 +203,5 @@ Here we create a variable called $personData which is then assigned to a Smarty 
 </table>
 ```
 Here we're using a foreach loop to iterate through each client. Each client adds a row to our table, which is how we want it to be.
-
-Click on tutorial in the main menu. If you haven't gone through chapter 1 with me, you might not have the database information - so re-install your module if you haven't followed along.
+If you now go and look at your module, you might see your input... or if you didn't input anything (or uninstalled your module before), you might not see anything at all!
+Let's fix that, shall we?
