@@ -16,7 +16,6 @@
     * [Text sanitation](book/smarty_sanitation/textsanitation.md)
 * [Part 3 - Building an AJAX Module](book/3.md)
 * [Part 4 - Xoops Blocks](book/4.md)
-* [Part 6 - Theme Development](book/6.md)
 * [Part 7 - $_SUPER GLOBALS How to use them in a XOOPS module](book/7.md)
 * [Part 8 - DB Operations and Classes](book/8.md) //delete, if not used
 * [Part 9 - Jquery and Javascript, a simple beginning](book/9.md)
