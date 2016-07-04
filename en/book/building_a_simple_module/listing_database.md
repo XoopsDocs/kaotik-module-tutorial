@@ -4,79 +4,7 @@ Okay, the last step we're going to do is to create a button that will list **all
 
 To do this, we're going to create a big chunk of code. By now, you should be able to find everything yourself.
 
-```php
-<?php
-// Tutorial 
-// Created by KaotiK 
-require('../../mainfile.php');
-require(XOOPS_ROOT_PATH.'/header.php');
-if (isset($_POST['listall'])) {
-    echo '<table width="100" border="0">
-    <tr>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Telephone</td>
-        <td>Email</td>
-    </tr>';
-    $query = $xoopsDB->query("SELECT * FROM ".$xoopsDB->prefix(basename(__DIR__)."_myform")";
-    while($myrow = $xoopsDB->fetchArray($query) )
-    {
-        $name       = $myrow['name'];
-        $address    = $myrow['address'];
-        $telephone  = $myrow['telephone'];
-        $email      = $myrow['email'];
-    echo '<tr><td>'.$name.'</td><td>'.$address.'</td><td>'.$telephone.'</td><td>'.$email.'</td></tr>';
-    }
-echo '</table>';
-}
-
-if (isset($_POST['submit'])){
-    if (empty($_POST['name'])){
-        echo 'Please enter a name';
-    } else {
-        $name=$_POST['name'];
-        $address=$_POST['address'];
-        $tel=$_POST['tel'];
-        $email=$_POST['email'];
-        $query = "INSERT INTO ".$xoopsDB->prefix(basename(__DIR__)."_myform")." (name, address, telephone, email) VALUES ('$name', '$address', '$tel', '$email' )";
-        $res = $xoopsDB->query($query);
-        if(!$res) {
-        echo "Error occured: $query";
-        } else {
-            echo "Data was correctly inserted into DB!";
-        }
-    }
-}
-?>
-<form name="tutorial_form" method="post" action="index.php">
-    <table width="400" border="0">
-        <tr>
-            <td align="right">Name</td>
-            <td><input type="text" name="name"></td>
-        </tr><tr>
-            <td align="right">Address</td>
-            <td><input type="text" name="address"></td>
-        </tr><tr>
-            <td align="right">Telephone</td>
-            <td><input type="text" name="tel"></td>
-        </tr><tr>
-            <td align="right">Email</td>
-            <td><input type="text" name="email"></td>
-        </tr><tr>
-            <td><input type="submit" name="listall" value="List All"></td>
-            <td><input type="submit" name="submit" value="submit"></td>
-        </tr>
-    </table>
-</form>
-<?php
-require(XOOPS_ROOT_PATH.'/footer.php');
-?>
-```
-
-We've done 2 big changes: one is that we've created a new button, called listall, that will list all rows in our table once it's pressed.
-The other one is an IF condition which will check if the listall button has been pressed.
-
-But, we've almost forgotten about our best practices! We're going to replace our hardcoded text with language constants, so that our module stays translateable.
+First, we're going to add some translation variables for the new text we're going to add.
 Open up the **main.php** file in the folder **/language/english** and add this code:
 
 ```php
@@ -87,7 +15,10 @@ Open up the **main.php** file in the folder **/language/english** and add this c
     define('TT_TELEPHONE','Telephone');
 ?>
 ```
-And finally, ladies and gentlemen, I can present you with the final code for index.php:
+And finally, ladies and gentlemen, I can present you with the final code for index.php.
+
+We've done 2 big changes: one is that we've created a new button, called listall, that will list all rows in our table once it's pressed.
+The other one is an IF condition which will check if the listall button has been pressed.
 ```php 
 <?php
     // This file contains all of the information XOOPS needs to work (like the database information). It's the bootstrap of XOOPS, basicly.
