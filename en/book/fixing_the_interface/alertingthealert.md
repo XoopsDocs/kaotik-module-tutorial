@@ -1,23 +1,10 @@
-#### Text sanitation
+#### Alerting the alert!
+Now, our module is looking great,but when we encounter errors, we still get a simple message that doesn't really pop-out.
+Is there a way to change that?
 
-We've already gone over this code in the previous chapter, and since there are only minor changes we won't go over them in detail.
-Basicly, the only changes that we've done are that we assign the error and success messages to a Smarty variable called **msg** - you probably noticed that.
+Well, luckily for us, there is.
 
-Now, we have added the code to show this error message, but we didn't add anything to display the error message. We should probably change that, so open up **people_main.html** and add this bit of code as the very first line:
-```php
-<{$msg}>
-```
-
-Now, reload your module form the main menu and click **Add new person**. Fill in the form with some data and submit the form... and if everything went well, we should have a new person in our database!
-
-There's one more step to conclude this part, and that's text sanitation. If you have no idea what that is - web developers have a saying, **never trust your users!**. This means that you should always play safe and assume that there could be malicious intentions from people using your site. With that being said, never allow someone to access your database using forms or gets without properly checking if the fields contain valid data types!
-That's how **SQL injections** occur, by allowing people to write invalid data into forms, which then get passed to the database to be processed.
-Fortunately for us, XOOPS already has a sanitation process that you can easily use in your module. In fact, we've been using that all the time already!
-
-The **$xoopsDB->escape** function that we've been using has been taking care of it for us, as that's one of the handy benefits XOOPS gives us.
-
-At the end of our second chapter, your **index.php** should look like this:
-
+Open up **index.php** and change the code to this:
 ```php
 <?php
     // This file contains all of the information XOOPS needs to work (like the database information). It's the bootstrap of XOOPS, basicly.
@@ -31,7 +18,7 @@ At the end of our second chapter, your **index.php** should look like this:
         // If the name isn't filled in...
         if(empty(Xmf\Request::getString('name', ''))) {
             // Display an error.
-            $xoopsTpl->assign('msg', PP_ENTERNAME);
+            $xoopsTpl->assign('msg', "<p class='bg-danger'>".PP_ENTERNAME."</p>");
         } else {
             //  You should NEVER trust anything that your users post - always first check the input.
             $name       =   $xoopsDB->escape(Xmf\Request::getString('name', ''));
@@ -43,9 +30,9 @@ At the end of our second chapter, your **index.php** should look like this:
             // Let's perform the query
             $res        =   $xoopsDB->query($query);
             if (!$res) {
-                $xoopsTpl->assign('msg', PP_ERROR . $xoopsDB->error);
+                $xoopsTpl->assign('msg', "<p class='bg-danger'>".PP_ERROR . $xoopsDB->error."</p>");
             } else {
-                $xoopsTpl->assign('msg', PP_SAVED);
+                $xoopsTpl->assign('msg', "<p class='bg-success'>".PP_SAVED."</p>");
             }
         }
     } else {
@@ -83,4 +70,6 @@ At the end of our second chapter, your **index.php** should look like this:
     require_once XOOPS_ROOT_PATH . '/footer.php';
 ?>
 ```
-Now the data can be safely placed in our database without risks of SQL injections!
+
+What we've done here is adding a class (either bg-success or bg-danger) to our msg variable, like this: **"<p class='bg-success'>".PP_SAVED."</p>"**.
+Because of this, our variables are now loaded wrapped in this style - so our error (or success) messages now have a style.
