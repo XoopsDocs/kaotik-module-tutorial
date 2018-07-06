@@ -1,9 +1,9 @@
 ### _XOOPS Documentation Series_
-![logoXoops.jpg](assets/logoXoops.jpg)
+![](assets/logoXoops.jpg)
 
 # Building XOOPS modules
 ## Originally written by KaotiK, complete revision by Kevin Petit
-#### for XOOPS 2.5.8
+#### for XOOPS 2.5.9
 
 ** This book is currently undergoing a revision - not all parts are up-to-date!. **
 
@@ -11,7 +11,7 @@
             
 ## Developer Manual
 
-© 2016 XOOPS Project ([www.xoops.org](https://xoops.org))   
+© 2018 XOOPS Project ([www.xoops.org](https://xoops.org))   
 
 
 This book will learn you how to build modules for XOOPS. 
@@ -44,7 +44,7 @@ You are assumed to have at least a basic understanding of HTML, SQL and PHP.
 * [Part 12 - Cloning functions, a diferent approach dealing with classes.](book/12.md) 
 * [Credits](book/13.md) 
 
-##License:
+## License:
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Unless specified, this content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
