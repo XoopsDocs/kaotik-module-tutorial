@@ -1,7 +1,7 @@
 # Getting our first module up and running
 Welcome to the path to building your first XOOPS module! Don't worry, it's actually not that hard as you think, and we'll walk you through every step of it.
 
-Should you get stuck, don't worry and feel free to ask for help on our [official forums](http://xoops.org/modules/newbb/viewforum.php?forum=65).
+Should you get stuck, don't worry and feel free to ask for help on our [official forums](https://xoops.org/modules/newbb/viewforum.php?forum=65).
 
 ## Getting started
 In order to create our first module, we'll need to set-up some files and a directory structure. Let's get right to it!

@@ -3,7 +3,7 @@
 In this chapter, we're going to go step-by-step in order to create our first simple module.
 At first, it's not going to do anything at all, but by the end, we will build a people database where users can store information about users.
 
-Should you have any questions, or become stuck, please feel free to ask questions on the [http://xoops.org/modules/newbb/viewforum.php?forum=65](official XOOPS forums).
+Should you have any questions, or become stuck, please feel free to ask questions on the [https://xoops.org/modules/newbb/viewforum.php?forum=65](official XOOPS forums).
 
 The steps we're going to take are the following:
 
