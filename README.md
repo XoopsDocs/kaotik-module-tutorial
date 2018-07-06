@@ -11,7 +11,7 @@
             
 ## Developer Manual
 
-© 2016 XOOPS Project ([www.xoops.org](http://xoops.org))   
+© 2016 XOOPS Project ([www.xoops.org](https://xoops.org))   
 
 
 This book will learn you how to build modules for XOOPS. 
@@ -48,4 +48,4 @@ You are assumed to have at least a basic understanding of HTML, SQL and PHP.
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Unless specified, this content is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
-All derivative works are to be attributed to XOOPS Project ([www.xoops.org](http://xoops.org))
+All derivative works are to be attributed to XOOPS Project ([www.xoops.org](https://xoops.org))
